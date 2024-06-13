@@ -100,7 +100,7 @@
   <project path="hardware/qcom-caf/sm6225/display" name="SM6225-AD/hardware_qcom_display" remote="github" revision="lineage-21" />
   <project path="hardware/qcom-caf/sm6225/media" name="SM6225-AD/hardware_qcom_media" remote="github" revision="lineage-21" />
   <project path="device/qcom/sepolicy_vndr/sm6225" name="SM6225-AD/device_qcom_sepolicy_vndr" remote="github" revision="lineage-21" />
-  <project path="hardware/xiaomi/" name="LineageOS/hardware/xiaomi/" remote="github" revision="lineage-21" />
+  <project path="hardware/xiaomi/" name="LineageOS/android_hardware_xiaomi" remote="github" revision="lineage-21" />
   <!-- sepolicy -->
   <project path="device/genesis/sepolicy" name="device_genesis_sepolicy" remote="GenesisOS" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,sdm660" remote="GenesisOS" />
