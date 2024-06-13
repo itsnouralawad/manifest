@@ -12,7 +12,7 @@ Compiling GenesisOS
 
 ### First you need to initialize your local repository using the following command:
 ```
-repo init -u https://github.com/GenesisOS/manifest.git -b utopia-2.0 --git-lfs
+repo init -u https://github.com/itsnouralawad/manifest.git -b utopia-2.0 --git-lfs
 ```
 ### Then Sync the source code using the following command:
 ```

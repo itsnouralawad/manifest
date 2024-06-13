@@ -9,6 +9,9 @@
            fetch="https://gitlab.com/TheGenesisOS"
            revision="utopia-2.0" />
 
+  <remote  name="github"
+           fetch="https://github.com" />
+
   <!-- art -->
   <project path="art" name="art" groups="pdk" remote="GenesisOS" />
 
@@ -43,10 +46,13 @@
 
   <!-- hardware -->
   <project path="hardware/genesis/interfaces" name="hardware_genesis_interfaces" remote="GenesisOS" />
-  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="GenesisOS" >
+  <project path="hardware/qcom-caf/common" name="itsnouralawad/android_hardware_qcom-caf_common" groups="qcom" remote="github" revision="lineage-21.0" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm6225/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6225/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm6225/Android.mk" />
     <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
@@ -86,7 +92,15 @@
   <project path="packages/overlays/Genesis" name="packages_overlays_Genesis" remote="GenesisOS" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="GenesisOS" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="GenesisOS" />
-
+  <project path="hardware/qcom-caf/sm6225/audio/agm" name="SM6225-AD/vendor_qcom_opensource_agm" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/audio/pal" name="SM6225-AD/vendor_qcom_opensource_arpal-lx" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="SM6225-AD/hardware_qcom_audio-ar" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/data-ipa-cfg-mgr" name="SM6225-AD/vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/dataipa" name="SM6225-AD/vendor_qcom_opensource_dataipa" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/display" name="SM6225-AD/hardware_qcom_display" remote="github" revision="lineage-21" />
+  <project path="hardware/qcom-caf/sm6225/media" name="SM6225-AD/hardware_qcom_media" remote="github" revision="lineage-21" />
+  <project path="device/qcom/sepolicy_vndr/sm6225" name="SM6225-AD/device_qcom_sepolicy_vndr" remote="github" revision="lineage-21" />
+  <project path="hardware/xiaomi/" name="LineageOS/hardware/xiaomi/" remote="github" revision="lineage-21" />
   <!-- sepolicy -->
   <project path="device/genesis/sepolicy" name="device_genesis_sepolicy" remote="GenesisOS" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,sdm660" remote="GenesisOS" />
